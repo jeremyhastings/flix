@@ -37,7 +37,7 @@ $secondary: $dark-gray;
 // Custom CSS
 
 .content {
-	@extend .container;
+	@extend .container !optional;
 }
 
 // Header and Nav
@@ -48,7 +48,7 @@ header {
 	margin-bottom: 3rem;
 
 	nav {
-		@extend .navbar, .navbar-expand-md;
+		@extend .navbar, .navbar-expand-md !optional;
 
 		img {
 			height: 50px;
@@ -60,28 +60,28 @@ header {
 		}
 
 		a.button {
-			@extend .btn, .btn-outline-secondary;
+			@extend .btn, .btn-outline-secondary !optional;
     }
 
     ul {
-      @extend .nav, .navbar-nav;
+      @extend .nav, .navbar-nav !optional;
 			letter-spacing: 1px;
 
 			&.left {
-				@extend .mr-auto;
+				@extend .mr-auto !optional;
 			}
 
 			&.right {
-				@extend .ml-auto;
+				@extend .ml-auto !optional;
 			}
 
 			li {
-				@extend .nav-item;
+				@extend .nav-item !optional;
 				font-size: 1.1rem;
         margin-right: 5px;
 
 				a {
-				 @extend .nav-link;
+				 @extend .nav-link !optional;
 				 padding-bottom: 1px;
 				}
 
@@ -110,7 +110,7 @@ header {
 // Movies Index Page
 
 section.movie {
-	@extend .row;
+	@extend .row !optional;
 	margin-bottom: 1.5rem;
 	padding-bottom: 1em;
 	border-bottom: 1px dotted $border-color;
@@ -120,7 +120,7 @@ section.movie {
 	}
 
 	.image {
-		@extend .col-md-3, .text-center;
+		@extend .col-md-3, .text-center !optional;
 		img {
 			width: 100px;
 			box-shadow: $box-shadow;
@@ -128,7 +128,7 @@ section.movie {
 	}
 
 	.summary {
-		@extend .col-md-9, .text-left;
+		@extend .col-md-9, .text-left !optional;
 	}
 
 	h2 {
@@ -155,10 +155,10 @@ section.movie {
 // Movie Show Page
 
 section.movie-details {
-	@extend .row;
+	@extend .row !optional;
 
 	.image {
-		@extend .col-md-3, .text-left;
+		@extend .col-md-3, .text-left !optional;
 
 		input[type="submit"] {
 			margin-top: 1rem;
@@ -166,11 +166,11 @@ section.movie-details {
 	}
 
 	.details {
-		@extend .col-md-7, .text-left;
+		@extend .col-md-7, .text-left !optional;
 	}
 
 	aside {
-		@extend .col-md-2;
+		@extend .col-md-2 !optional;
 	}
 
 	h1 {
@@ -200,21 +200,21 @@ section.movie-details {
 	}
 
 	.faves {
-		@extend .input-group;
+		@extend .input-group !optional;
 		margin-top: 1rem;
 
 		form {
-			@extend .input-group-prepend;
+			@extend .input-group-prepend !optional;
 		}
 
 		.count {
-			@extend .input-group-append, .input-group-text;
+			@extend .input-group-append, .input-group-text !optional;
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
 		}
 
 		input[type="submit"] {
-			@extend .btn, .btn-outline-secondary;
+			@extend .btn, .btn-outline-secondary !optional;
 			border-color: #cdd3d8;
 			border-right: none;
 			border-top-right-radius: 0;
@@ -235,7 +235,7 @@ section.movie-details {
 	}
 
 	a.review {
-		@extend .btn, .btn-success;
+		@extend .btn, .btn-success !optional;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		margin-top: 1rem;
@@ -278,27 +278,27 @@ section.user {
 		margin-top: 1rem;
 
 		.button {
-			@extend .btn, .btn-sm;
+			@extend .btn, .btn-sm !optional;
 
 			&.edit {
-				@extend .btn-outline-secondary;
+				@extend .btn-outline-secondary !optional;
 			}
 
 			&.delete {
-				@extend .btn-danger;
+				@extend .btn-danger !optional;
 			}
 		}
 	}
 
 	.review {
-		@extend .row;
+		@extend .row !optional;
 		margin: 1rem 0;
 		border-radius: 0.3rem;
 		border: 1px solid $border-color;
 		padding: 1rem;
 
 		.details {
-			@extend .col-md-12, .text-left;
+			@extend .col-md-12, .text-left !optional;
 
 			.title {
 				font-size: 1.15rem;
@@ -353,7 +353,7 @@ ul.reviews {
 		}
 
 		.button {
-			@extend .btn, .btn-sm, .btn-outline-danger;
+			@extend .btn, .btn-sm, .btn-outline-danger !optional;
 			margin-left: 0.5rem;
 		}
   }
@@ -384,7 +384,7 @@ section.admin {
 	}
 
 	a.button {
-		@extend .btn, .btn-secondary;
+		@extend .btn, .btn-secondary !optional;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 	}
@@ -432,7 +432,7 @@ form:not([class="button_to"]) {
 	input:not([type="checkbox"]),
 	textarea,
 	select:not(.date) {
-		@extend .form-control;
+		@extend .form-control !optional;
 		margin-bottom: 0.75rem;
 		width: 100%;
 	}
@@ -443,40 +443,40 @@ form:not([class="button_to"]) {
 	}
 
 	input[type="submit"] {
-		@extend .btn, .btn-primary, .btn-block;
+		@extend .btn, .btn-primary, .btn-block !optional;
 		margin-top: 1.5rem;
 	}
 
 	input[type="checkbox"] {
-		@extend .form-check-input;
+		@extend .form-check-input !optional;
 		width: 20px;
 	  height: 20px;
 	}
 
 	input[type="checkbox"] + label {
-		@extend .form-check-label;
+		@extend .form-check-label !optional;
 		padding-left: 0.5rem;
 		margin-bottom: 0.5rem;
 	}
 
 	input[type="radio"] {
-		@extend .form-check-input;
+		@extend .form-check-input !optional;
 		width: 20px;
 	  height: 20px;
 	}
 
 	input[type="radio"] + label {
-		@extend .form-check-label;
+		@extend .form-check-label !optional;
 		margin-bottom: 0.6rem;
 		font-weight: 400;
 	}
 
 	.star {
-		@extend .form-check, .form-check-inline;
+		@extend .form-check, .form-check-inline !optional;
 	}
 
 	.checkboxes {
-		@extend .form-check;
+		@extend .form-check !optional;
 		margin-top: 1.5rem;
 	}
 
@@ -494,17 +494,17 @@ form:not([class="button_to"]) {
 // Flashes
 
 .flash {
-	@extend .alert;
+	@extend .alert !optional;
 	text-align: center;
 	margin-top: -1rem;
 	margin-bottom: 2rem;
 
   &.notice {
-		@extend .alert-success;
+		@extend .alert-success !optional;
   }
 
   &.alert {
-		@extend .alert-danger;
+		@extend .alert-danger !optional;
   }
 
   &.danger {
