@@ -35,7 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rexml' # default with Ruby 2.7 needs to be added for Ruby 3.0
 
 # Use Active Storage variant
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 
 # Add Amazon S3
 gem "aws-sdk-s3", require: false
